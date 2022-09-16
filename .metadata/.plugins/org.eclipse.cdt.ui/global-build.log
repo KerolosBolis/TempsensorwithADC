@@ -1,0 +1,82 @@
+20:12:35 **** Clean-only build of configuration Debug for project Mini_Project_3 ****
+make clean 
+rm -rf  ./ADC_Driver.o ./App.o ./GPIO.o ./LCD.o ./dc_motor.o ./lm35_sensor.o ./pwm_Driver.o  sizedummy  Mini_Project_3.lss  ./ADC_Driver.d ./App.d ./GPIO.d ./LCD.d ./dc_motor.d ./lm35_sensor.d ./pwm_Driver.d  Mini_Project_3.elf
+ 
+20:12:37 **** Build of configuration Debug for project Mini_Project_3 ****
+make all 
+Building file: ../ADC_Driver.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"ADC_Driver.d" -MT"ADC_Driver.o" -c -o "ADC_Driver.o" "../ADC_Driver.c"
+Finished building: ../ADC_Driver.c
+ 
+Building file: ../App.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"App.d" -MT"App.o" -c -o "App.o" "../App.c"
+../App.c: In function 'main':
+../App.c:25: warning: pointer targets in passing argument 1 of 'LCD_displayString' differ in signedness
+../App.c:27: warning: pointer targets in passing argument 1 of 'LCD_displayString' differ in signedness
+../App.c:42: warning: pointer targets in passing argument 1 of 'LCD_displayString' differ in signedness
+../App.c:44: warning: pointer targets in passing argument 1 of 'LCD_displayString' differ in signedness
+../App.c:59: warning: pointer targets in passing argument 1 of 'LCD_displayString' differ in signedness
+../App.c:61: warning: pointer targets in passing argument 1 of 'LCD_displayString' differ in signedness
+../App.c:76: warning: pointer targets in passing argument 1 of 'LCD_displayString' differ in signedness
+../App.c:78: warning: pointer targets in passing argument 1 of 'LCD_displayString' differ in signedness
+../App.c:93: warning: pointer targets in passing argument 1 of 'LCD_displayString' differ in signedness
+../App.c:95: warning: pointer targets in passing argument 1 of 'LCD_displayString' differ in signedness
+Finished building: ../App.c
+ 
+Building file: ../GPIO.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"GPIO.d" -MT"GPIO.o" -c -o "GPIO.o" "../GPIO.c"
+Finished building: ../GPIO.c
+ 
+Building file: ../LCD.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"LCD.d" -MT"LCD.o" -c -o "LCD.o" "../LCD.c"
+In file included from ../LCD.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../LCD.c
+ 
+../LCD.c: In function 'LCD_displayStringRowColumn':
+../LCD.c:78: warning: pointer targets in passing argument 1 of 'LCD_displayString' differ in signedness
+../LCD.c: In function 'LCD_intgerToString':
+../LCD.c:89: warning: pointer targets in passing argument 1 of 'LCD_displayString' differ in signedness
+Building file: ../dc_motor.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"dc_motor.d" -MT"dc_motor.o" -c -o "dc_motor.o" "../dc_motor.c"
+Finished building: ../dc_motor.c
+ 
+Building file: ../lm35_sensor.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"lm35_sensor.d" -MT"lm35_sensor.o" -c -o "lm35_sensor.o" "../lm35_sensor.c"
+Finished building: ../lm35_sensor.c
+ 
+Building file: ../pwm_Driver.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"pwm_Driver.d" -MT"pwm_Driver.o" -c -o "pwm_Driver.o" "../pwm_Driver.c"
+Finished building: ../pwm_Driver.c
+ 
+Building target: Mini_Project_3.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Mini_Project_3.map -mmcu=atmega16 -o "Mini_Project_3.elf"  ./ADC_Driver.o ./App.o ./GPIO.o ./LCD.o ./dc_motor.o ./lm35_sensor.o ./pwm_Driver.o   
+Finished building target: Mini_Project_3.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Mini_Project_3.elf  >"Mini_Project_3.lss"
+Finished building: Mini_Project_3.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Mini_Project_3.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:    9592 bytes (58.5% Full)
+(.text + .data + .bootloader)
+
+Data:        294 bytes (28.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
